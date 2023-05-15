@@ -1,0 +1,49 @@
+questions:
+- variable: resources.requests.cpu
+  label: CPU Request
+  description: "The amount of CPU to request. e.g. 500m, 1.0"
+  type: string
+  required: true
+  group: "Resource Allocation"
+
+- variable: resources.requests.memory
+  label: Memory Request
+  description: "The amount of memory to request. e.g. 1Gi, 2Gi"
+  type: string
+  required: true
+  group: "Resource Allocation"
+
+- variable: resources.limits.cpu
+  label: CPU Limit
+  description: "The maximum amount of CPU allowed. e.g. 1000m, 2.0"
+  type: string
+  required: true
+  group: "Resource Allocation"
+
+- variable: resources.limits.memory
+  label: Memory Limit
+  description: "The maximum amount of memory allowed. e.g. 1Gi, 2Gi"
+  type: string
+  required: true
+  group: "Resource Allocation"
+
+- variable: resources.limits.nvidia.com/gpu
+  label: GPU Limit
+  description: "The maximum number of GPUs allowed. e.g. 1, 2"
+  type: string
+  required: false
+  group: "Resource Allocation"
+
+- variable: persistence.enabled
+  label: Enable persistence
+  description: "If true, use a Persistent Volume Claim for storage"
+  type: boolean
+  initial: true
+  group: "Storage"
+
+- variable: persistence.size
+  label: Persistent Volume Size
+  description: "The size of the Persistent Volume to request. e.g. 10Gi, 20Gi"
+  type: string
+  required: true
+  group: "Storage"
