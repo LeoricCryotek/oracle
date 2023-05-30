@@ -9,7 +9,7 @@ image:
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8050
 
 resources: {}
 
